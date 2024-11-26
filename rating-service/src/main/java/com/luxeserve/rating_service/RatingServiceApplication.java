@@ -1,4 +1,4 @@
-package com.luxeserve.rating_service.rating_service;
+package com.luxeserve.rating_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
