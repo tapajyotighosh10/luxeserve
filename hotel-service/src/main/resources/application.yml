@@ -1,0 +1,19 @@
+server:
+  port: 9393
+spring:
+  application:
+    name: HOTEL-SERVICE
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/luxeserve_hotel
+    username: root
+    password: ghosh
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
