@@ -1,5 +1,7 @@
 package com.luxeserve.user_service.entity;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Getter
+@JsonPropertyOrder({"ratingId","userId","hotelId","rating","feedback","hotel"})
 public class Rating {
     private String ratingId;
     private String UserId;
@@ -16,5 +19,6 @@ public class Rating {
     private int rating;
     private String feedback;
 
+    private Hotel hotel;
 
 }
