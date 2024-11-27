@@ -1,0 +1,25 @@
+server:
+  port: 8085
+
+
+spring:
+  application:
+    name: CONFIG-SERVER
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tapajyotighosh10/luxeserve-configuration
+          clone-on-start: true
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8089/eureka/

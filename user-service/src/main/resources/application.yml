@@ -1,9 +1,10 @@
 server:
   port: 9191
 spring:
-  application:
-    name: USER-SERVICE
-
+#  application:
+#    name: USER-SERVICE
+  config:
+    import: optional:configserver:http://localhost:8085
   datasource:
     url: jdbc:mysql://localhost:3306/luxeserve
     username: root
@@ -17,11 +18,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
         show_sql: true
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8089/eureka/
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8089/eureka/
