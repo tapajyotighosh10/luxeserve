@@ -1,6 +1,7 @@
 package com.luxeserve.user_service.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({"userId", "name", "email", "about", "ratings"})
 public class Users {
     @Id
     @Column(name = "ID")
@@ -30,5 +32,6 @@ public class Users {
 
     @Transient
     private List<Rating> ratings=new ArrayList<>();
+
 
 }
