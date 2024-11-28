@@ -3,7 +3,8 @@ server:
 spring:
   application:
     name: HOTEL-SERVICE
-
+  config:
+    import: optional:configserver:http://localhost:8085
   datasource:
     url: jdbc:mysql://localhost:3306/luxeserve_hotel
     username: root
@@ -18,11 +19,11 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         show_sql: true
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8089/eureka/
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8089/eureka/
